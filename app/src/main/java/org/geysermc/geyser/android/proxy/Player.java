@@ -117,7 +117,7 @@ public class Player {
         settings.setRewindHistorySize(0);
         settings.setServerAuthoritativeBlockBreaking(false);
         startGamePacket.setPlayerMovementSettings(settings);
-        startGamePacket.setVanillaVersion("1.17.40");
+        startGamePacket.setVanillaVersion("*");
 
         startGamePacket.setLevelId("world");
         startGamePacket.setLevelName("world");

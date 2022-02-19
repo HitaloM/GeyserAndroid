@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "org.geysermc.geyser.android"
         minSdkVersion 24
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 103001 // Format 00.00.000    EG 1.0.1 -> 01.00.001 -> 0100001 -> 100001
         versionName "1.3.1"
 
@@ -20,7 +20,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -118,7 +118,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-databind:2.10.2"
 
     // Remove epoll, kqueue and fastutil from the protocol
-    implementation('com.github.BedrockTogether:Protocol:f883229fa2') {
+    implementation('com.github.BedrockTogether:Protocol:3e7daec') {
         exclude group: 'com.nukkitx.fastutil', module:'fastutil-common'
         exclude group: 'com.nukkitx.network', module:'raknet'
         exclude group: 'com.nukkitx.network', module:'common'
