@@ -115,7 +115,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.16'
 
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.10.2"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.13.1"
 
     // Remove epoll, kqueue and fastutil from the protocol
     implementation('com.github.BedrockTogether:Protocol:3e7daec') {
