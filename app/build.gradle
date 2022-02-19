@@ -135,7 +135,7 @@ dependencies {
 
     // Remove the duplicate classes and include fastutil-common
     compileOnly jarjar.repackage('fastutil-cleaned.jar') {
-        from 'com.nukkitx.fastutil:fastutil-common:8.5.2'
+        from 'com.nukkitx.fastutil:fastutil-common:8.5.3'
 
 //        classDelete "it.unimi.dsi.fastutil.ints.IntIterator"
 //        classDelete "it.unimi.dsi.fastutil.longs.LongIterator"
