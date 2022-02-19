@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    paths-ignore:
+      - '*.md'
+      - '*.yml'
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: Set up Java
+      uses: actions/setup-java@v1
+      with:
+        java-version: 12.x
+
+    - name: Build
+      run: |
+        ./gradlew assembleDebug
+
+    - name: Show files
+      run: |
+        ls */*/*/*
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: GeyserAPP
+        path: |
+              **/*.apk
