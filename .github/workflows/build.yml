@@ -28,7 +28,7 @@ jobs:
 
     - name: Build
       run: |
-        ./gradlew assembleDebug
+        ./gradlew assembleRelease
 
     - name: Show files
       run: |
