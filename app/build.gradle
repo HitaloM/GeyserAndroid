@@ -29,7 +29,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -128,7 +128,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-databind:2.10.2"
 
     // Remove epoll, kqueue and fastutil from the protocol
-    implementation('com.github.BedrockTogether:Protocol:3e7daec') {
+    implementation('com.github.BedrockTogether:Protocol:f19f611') {
         exclude group: 'com.nukkitx.fastutil', module:'fastutil-common'
         exclude group: 'com.nukkitx.network', module:'raknet'
         exclude group: 'com.nukkitx.network', module:'common'
@@ -161,5 +161,5 @@ dependencies {
     implementation tasks.nnioJar.outputs.files
 
     // slf4j port for Android
-    implementation 'org.slf4j:slf4j-android:1.7.30'
+    implementation 'org.slf4j:slf4j-android:1.7.36'
 }
